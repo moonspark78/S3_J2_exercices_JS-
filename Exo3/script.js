@@ -19,9 +19,16 @@ const entrepreneurs = [
   { first: 'Peter', last: 'Thiel', year: 1967 }
 ];
 
-let entrepreneursBornIn1970s = entrepreneurs.filter(entrepreneur => {
+/* let entrepreneursBornIn1970s = entrepreneurs.filter(entrepreneur => {
   return entrepreneur.year >= 1970 && entrepreneur.year < 1980;
 });
+console.log(entrepreneursBornIn1970s); */
+function getEntrepreneursBornIn1970s(entrepreneurs) {
+    return entrepreneurs.filter(entrepreneur => 
+         entrepreneur.year >= 1970 && entrepreneur.year < 1980
+    );
+}
+let entrepreneursBornIn1970s = getEntrepreneursBornIn1970s(entrepreneurs);
 console.log(entrepreneursBornIn1970s);
 
 let entrepreneursFullName = entrepreneurs.map(entrepreneur => {
